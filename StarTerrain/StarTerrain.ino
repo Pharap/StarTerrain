@@ -60,7 +60,12 @@ struct Camera
 
 Camera camera;
 
-// This function was determined through trial and error
+// This function is the state function of an
+// xorshift pseudo-random number generator
+// and the values are taken from Wikipedia
+// https://en.wikipedia.org/wiki/Xorshift#Example_implementation
+// which are in turn from a document
+// written by George Marsaglia.
 uint32_t hash(uint32_t value)
 {
 	value ^= (value << 13);
